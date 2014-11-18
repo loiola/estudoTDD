@@ -1,23 +1,28 @@
 #!/usr/bin/env python
 
-def MultiploDeTres(numero):
+def multiploDeTres(numero):
 	return not numero % 3
 
-def MultiploDeCinco(numero):
+def multiploDeCinco(numero):
 	return not numero % 5
 
-def FizzBuzz(numero):
-	if MultiploDeTres(numero) and MultiploDeCinco(numero):
+def fizzBuzz(numero):
+	if multiploDeTres(numero) and multiploDeCinco(numero):
 		return "fizzbuzz"
 
-	if MultiploDeTres(numero):
+	if multiploDeTres(numero):
 		return "fizz"
 
-	if MultiploDeCinco(numero):
+	if multiploDeCinco(numero):
 		return "buzz"
 
 	return numero
 
+numero = int(raw_input("Digite um numero: "))
+multiploDeTres(numero)
+multiploDeCinco(numero)
+fizzBuzz(numero)
+print("O resultado fizzbuzz para o numero %d eh %s" %(numero, fizzBuzz(numero)))
 
 
 
